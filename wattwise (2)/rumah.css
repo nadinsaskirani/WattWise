@@ -1,0 +1,5 @@
+.ide{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin:20px 0}
+.ide article{background:var(--l);border-top:5px solid var(--y);border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:4px}
+.ide h3{margin:0}
+.ide p{margin:0 0 8px}
+.ide .tag{align-self:flex-start;margin-top:auto;background:#fff;color:var(--g);padding:3px 12px;border-radius:14px;font:700 .9rem "Trebuchet MS",sans-serif}

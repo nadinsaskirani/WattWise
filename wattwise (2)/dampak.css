@@ -1,0 +1,7 @@
+.alur{list-style:none;padding:0;display:grid;gap:10px;counter-reset:a}
+.alur li{counter-increment:a;position:relative;background:var(--l);border-left:6px solid var(--y);border-radius:10px;padding:14px 16px 14px 56px}
+.alur li::before{content:counter(a);position:absolute;left:14px;top:12px;width:30px;height:30px;border-radius:50%;background:var(--g);color:#fff;display:grid;place-items:center;font:700 1rem "Trebuchet MS",sans-serif}
+.alur li:not(:last-child)::after{content:"↓";position:absolute;left:21px;bottom:-26px;color:var(--g);font-weight:800}
+.untung{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.untung div{background:var(--l);border-top:5px solid var(--g);border-radius:10px;padding:14px 18px}
+.untung h3{margin:0 0 4px}
