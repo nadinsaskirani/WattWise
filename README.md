@@ -1,9 +1,9 @@
 # Wattwise
 Website edukasi SDG 7 (Energi Bersih dan Terjangkau): hemat energi dan rumah ramah lingkungan.
 
-## Sumber gambar
-- foto-nadin.jpg dan gif-hi.gif: dokumentasi pribadi.
-- gif-horay.gif (opsional): tulis nama situs dan link.
+## Image Sources
+- pay bills.jpg: Rawpixel, https://www.rawpixel.com/image/2051982/man-paying-bills utm_medium=organic&utm_source=Pinterest
 
-## Sumber data
+
+## Data Sources
 - (Tambahkan sumber, misalnya sdgs.un.org, Kementerian ESDM.)
