@@ -1,8 +1,167 @@
-.fokus{display:flex;gap:20px;align-items:center;background:var(--d);color:#fff;border-radius:18px;padding:22px;margin:24px 0}
-.fokus h2,.fokus p{color:#fff;margin:0}
-.fokus h2{margin-bottom:4px}
-.badge{flex:none;width:76px;height:76px;border-radius:16px;background:var(--y);color:var(--d);display:grid;place-items:center;font:800 2.8rem "Trebuchet MS",sans-serif}
-.rel{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
-.rel div{background:var(--l);border-top:5px solid var(--y);border-radius:10px;padding:14px 18px}
-.rel p{margin:4px 0 0}
-@media(max-width:600px){.fokus{flex-direction:column;text-align:center}}
+/* latar halaman, sama seperti homepage */
+body {
+  background:
+    radial-gradient(circle at 10% 15%, rgba(207, 227, 198, 0.8), transparent 45%),
+    radial-gradient(circle at 92% 12%, rgba(245, 197, 24, 0.2), transparent 40%),
+    radial-gradient(circle at 85% 85%, rgba(168, 208, 255, 0.35), transparent 45%),
+    #fbfdf7;
+  background-attachment: fixed;
+}
+
+/* isi halaman */
+main {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 48px 20px 80px;
+}
+
+main h1 {
+  margin: 0 0 16px;
+  font-size: 2.2rem;
+  color: var(--d);
+}
+
+main h2 {
+  margin: 40px 0 12px;
+  font-size: 1.5rem;
+}
+
+main p {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* kotak fokus SDG 7 */
+.fokus {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin: 28px 0;
+  padding: 24px;
+  border-radius: 18px;
+  background: var(--d);
+  color: #fff;
+}
+
+.fokus h2,
+.fokus p {
+  margin: 0;
+  color: #fff;
+}
+
+.fokus h2 {
+  margin-bottom: 4px;
+}
+
+.fokus p {
+  font-size: 0.95rem;
+}
+
+.badge {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 76px;
+  height: 76px;
+  border-radius: 16px;
+  background: var(--y);
+  color: var(--d);
+  font: 800 2.8rem "Trebuchet MS", sans-serif;
+}
+
+/* daftar target (klik untuk buka) */
+details {
+  margin-bottom: 12px;
+  border: 1px solid #dfe8d8;
+  border-radius: 12px;
+  background: #fff;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+
+details:hover {
+  box-shadow: 0 4px 12px rgba(31, 58, 38, 0.12);
+}
+
+summary {
+  padding: 16px 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+summary b {
+  display: inline-block;
+  min-width: 40px;
+  color: var(--g);
+}
+
+details[open] summary {
+  border-bottom: 1px solid #dfe8d8;
+}
+
+details p {
+  margin: 0;
+  padding: 16px 20px;
+}
+
+/* kartu tujuan terkait */
+.rel {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 14px;
+}
+
+.rel div {
+  padding: 14px 18px;
+  border-top: 5px solid var(--y);
+  border-radius: 10px;
+  background: var(--l);
+  transition: transform 0.2s;
+}
+
+.rel div:hover {
+  transform: translateY(-4px);
+}
+
+.rel p {
+  margin: 4px 0 0;
+  font-size: 0.95rem;
+}
+
+/* kotak catatan sumber */
+.note {
+  margin-top: 28px;
+  padding: 16px 20px;
+  border-left: 4px solid var(--g);
+  border-radius: 0 12px 12px 0;
+  background: var(--l);
+  font-size: 0.95rem;
+}
+
+/* tampilan HP */
+@media (max-width: 700px) {
+  main {
+    padding: 32px 16px 60px;
+  }
+
+  main h1 {
+    font-size: 1.8rem;
+  }
+
+  .fokus {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* kurangi animasi */
+@media (prefers-reduced-motion: reduce) {
+  details,
+  .rel div {
+    transition: none;
+  }
+
+  .rel div:hover {
+    transform: none;
+  }
+}
