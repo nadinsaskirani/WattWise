@@ -44,12 +44,18 @@ body {
   justify-content: flex-start !important;
 }
 
-/* ===== How it works (two-column layout) ===== */
+/* ===== How it works ===== */
 .why {
   display: grid;
-  grid-template-columns: 1fr 1.4fr;
+  grid-template-columns: 1fr 1.3fr;
   gap: 40px;
   align-items: center;
+  max-width: 1200px;
+}
+
+.why-text {
+  max-width: none;
+  text-align: left;
 }
 
 .label {
@@ -73,36 +79,35 @@ body {
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 16px;
-  counter-reset: s;
 }
 
 .steps li {
-  counter-increment: s;
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  column-gap: 14px;
+  align-items: center;
+  align-content: start;
   background: #fff;
   border-radius: 14px;
   padding: 22px;
   box-shadow: 0 2px 12px rgba(31, 58, 38, 0.1);
 }
 
-.steps li:last-child {
-  grid-column: 1 / -1;
-}
-
 .steps .vector {
-  display: block;
-  width: 56px;
-  height: 56px;
-  margin-bottom: 12px;
+  width: 48px;
+  height: 48px;
+  margin: 0;
 }
 
 .steps h3 {
-  margin: 0 0 4px;
+  margin: 0;
 }
 
 .steps p {
-  margin: 0;
+  grid-column: 1 / -1;
+  margin: 12px 0 0;
 }
 
 /* ===== Why it matters (cards) ===== */
@@ -142,7 +147,14 @@ body {
   flex-wrap: wrap;
 }
 
-/* ===== Responsive ===== */
+/* ===== Responsive: tablet ===== */
+@media (max-width: 960px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ===== Responsive: phone ===== */
 @media (max-width: 700px) {
   .hero {
     min-height: 420px;
@@ -159,16 +171,24 @@ body {
   .why {
     grid-template-columns: 1fr;
     gap: 24px;
-  } 
-}
-
-  .grid {
-    grid-template-columns: 1fr;
   }
 
   .steps {
     grid-template-columns: 1fr;
   }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .why {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+
+
 /* ===== Accessibility: reduce motion ===== */
 @media (prefers-reduced-motion: reduce) {
   .card:hover,
