@@ -9,7 +9,12 @@ Website edukasi SDG 7 (Energi Bersih dan Terjangkau): hemat energi dan rumah ram
 - bulb icon.png: ["Light Bulb Line Drawing"](https://www.svgrepo.com/svg/479561/light-bulb-line-drawing), SVG Repo, CC0 License (color changed)
 - bar icon.png: ["Bar Chart 5"](https://www.svgrepo.com/svg/502513/bar-chart-5), SVG Repo, CC0 License (color changed)
 - home icon.png: ["Eco Home Eco House"](https://www.svgrepo.com/svg/286165/eco-home-eco-house), SVG Repo, CC0 License (color changed)
-
+- phone charger : https://www.pexels.com/photo/minimalist-wall-socket-with-charging-cable-36022185/
+- sunlight : https://id.pinterest.com/pin/1112881757941104826/
+- energy star : https://id.pinterest.com/pin/4595149477620635520/
+- solar panel : https://www.pexels.com/photo/modern-home-with-rooftop-solar-panels-29206495/
+- ac remote : https://id.pinterest.com/pin/1009580441491432498/
+- led : https://www.pexels.com/photo/person-holding-white-light-bulb-3946161/
 
 ## Data Sources
 - (Tambahkan sumber, misalnya sdgs.un.org, Kementerian ESDM.)
