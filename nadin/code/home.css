@@ -17,8 +17,8 @@ body {
   margin: 0;
   padding: 110px max(5%, calc((100vw - 1000px) / 2));
   background:
-    linear-gradient(90deg, rgba(31, 58, 38, 0.92) 0%, rgba(31, 58, 38, 0.75) 45%, rgba(31, 58, 38, 0.1) 100%),
-    url("background.jpg") center / cover no-repeat;
+    linear-gradient(90deg, #1f3a26eb 0%, rgba(31, 58, 38, 0.75) 45%, rgba(31, 58, 38, 0.1) 100%),
+    url("/nadin/imgs/background.jpg") center / cover no-repeat;
 }
 
 .ht {
@@ -129,7 +129,7 @@ body {
 }
 
 .card {
-  background: #1f5a1c;
+  background: #1f3a26eb;
   border-radius: 16px;
   padding: 12px;
   text-align: left;
@@ -199,7 +199,7 @@ body {
     padding: 70px 5%;
     background:
       linear-gradient(rgba(31, 58, 38, 0.8), rgba(31, 58, 38, 0.7)),
-      url("background.jpg") center / cover no-repeat;
+      url("/nadin/imgs/background.jpg") center / cover no-repeat;
   }
 
   .hero h1 {
