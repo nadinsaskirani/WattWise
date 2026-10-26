@@ -7,7 +7,7 @@ body {
 }
 
 main {
-  max-width: 1000px;
+  max-width: 820px;
   margin: 0 auto;
   padding: 56px 20px 88px;
 }
@@ -152,12 +152,15 @@ main p {
   }
 }
 
-/* HP */
-@media (max-width: 560px) {
+/* HP: padding, sama dengan sdg.css */
+@media (max-width: 700px) {
   main {
     padding: 36px 16px 64px;
   }
+}
 
+/* HP kecil: kartu jadi satu kolom */
+@media (max-width: 560px) {
   .src {
     grid-template-columns: 1fr;
   }
