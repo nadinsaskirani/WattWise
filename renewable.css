@@ -1,10 +1,6 @@
 /* latar halaman */
 body {
-  background:
-    radial-gradient(circle at 10% 15%, rgba(207, 227, 198, 0.8), transparent 45%),
-    radial-gradient(circle at 92% 12%, rgba(245, 197, 24, 0.2), transparent 40%),
-    radial-gradient(circle at 85% 85%, rgba(168, 208, 255, 0.35), transparent 45%),
-    #fbfdf7;
+  background: linear-gradient(135deg, #eef7e8 0%, #fbfdf7 50%, #e8f1fb 100%);
   background-attachment: fixed;
 }
 
@@ -12,59 +8,88 @@ body {
 main {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 48px 20px 80px;
+  padding: 56px 20px 88px;
 }
 
 main h1 {
-  margin: 0 0 16px;
-  font-size: 2.2rem;
+  margin: 0 0 14px;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: clamp(2rem, 4vw, 2.7rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
   color: var(--d);
 }
 
 main p {
   font-size: 1rem;
-  line-height: 1.7;
+  line-height: 1.75;
 }
 
 /* kartu jenis energi */
 .src {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(6, 1fr);
   gap: 18px;
-  margin: 28px 0;
+  margin: 32px 0;
 }
 
 .src article {
+  position: relative;
+  grid-column: span 2;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 24px 22px;
-  border-top: 5px solid var(--y);
-  border-radius: 14px;
+  padding: 24px;
+  border: 1px solid #e1e9dc;
+  border-radius: 20px;
   background: #fff;
-  box-shadow: 0 2px 12px rgba(31, 58, 38, 0.1);
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
 }
 
 .src article:hover {
   transform: translateY(-4px);
-  box-shadow: 0 6px 18px rgba(31, 58, 38, 0.16);
+  border-color: var(--g);
+  box-shadow: 0 12px 28px rgba(31, 58, 38, 0.12);
 }
 
+/* kartu besar (Surya) */
+.src article:first-child {
+  grid-column: span 4;
+  min-height: 300px;
+  border-color: var(--d);
+  background:
+    radial-gradient(circle at 90% 10%, rgba(245, 197, 24, 0.18), transparent 45%),
+    var(--d);
+}
+
+/* ikon */
 .ico {
   display: grid;
   place-items: center;
-  width: 56px;
-  height: 56px;
-  margin-bottom: 12px;
-  border-radius: 14px;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 18px;
+  border-radius: 16px;
   background: var(--l);
-  font-size: 1.8rem;
+  font-size: 1.9rem;
 }
 
+.src article:first-child .ico {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 28px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.12);
+  font-size: 2.8rem;
+}
+
+/* judul dan teks */
 .src h3 {
   margin: 0 0 8px;
-  font-size: 1.25rem;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
   color: var(--d);
 }
 
@@ -72,47 +97,85 @@ main p {
   flex-grow: 1;
   margin: 0;
   font-size: 0.95rem;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
+.src article:first-child h3 {
+  font-size: 1.6rem;
+  color: #fff;
+}
+
+.src article:first-child p {
+  max-width: 520px;
+  color: #e8f3e0;
+}
+
+/* label di pojok kanan atas */
 .src small {
-  display: inline-block;
-  margin-top: 14px;
-  padding: 4px 12px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 5px 12px;
   border-radius: 999px;
-  background: var(--d);
-  color: var(--y);
-  font: 700 0.8rem "Trebuchet MS", sans-serif;
+  background: var(--l);
+  color: var(--g);
+  font: 700 0.75rem "Trebuchet MS", sans-serif;
+}
+
+.src article:first-child small {
+  background: var(--y);
+  color: var(--d);
 }
 
 /* kotak catatan sumber */
 .note {
-  margin-top: 28px;
+  margin-top: 32px;
   padding: 18px 22px;
-  border-left: 5px solid var(--g);
-  border-radius: 0 14px 14px 0;
-  background: #fff;
-  box-shadow: 0 2px 12px rgba(31, 58, 38, 0.1);
+  border: 1px solid #d5e3cd;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.7);
   font-size: 0.95rem;
   line-height: 1.7;
 }
 
-/* tampilan HP */
-@media (max-width: 700px) {
-  main {
-    padding: 32px 16px 60px;
+/* tablet */
+@media (max-width: 860px) {
+  .src {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  main h1 {
-    font-size: 1.8rem;
+  .src article,
+  .src article:first-child {
+    grid-column: span 1;
+  }
+
+  .src article:first-child {
+    grid-column: span 2;
+    min-height: 0;
+  }
+}
+
+/* HP */
+@media (max-width: 560px) {
+  main {
+    padding: 36px 16px 64px;
   }
 
   .src {
     grid-template-columns: 1fr;
   }
+
+  .src article,
+  .src article:first-child {
+    grid-column: span 1;
+  }
+
+  .src small {
+    position: static;
+    margin-bottom: 14px;
+  }
 }
 
-/* kurangi animasi */
 @media (prefers-reduced-motion: reduce) {
   .src article {
     transition: none;
