@@ -1,19 +1,26 @@
-/* latar halaman */
-body {
-  background: linear-gradient(135deg, #eef7e8 0%, #fbfdf7 50%, #e8f1fb 100%);
-  background-attachment: fixed;
+:root {
+  --sans: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
 }
 
-/* isi halaman */
+body {
+  background: #f7faf5;
+}
+
 main {
   max-width: 1000px;
   margin: 0 auto;
   padding: 56px 20px 88px;
 }
 
+/* font sans untuk judul dan label */
+main h1,
+.src h3,
+.src small {
+  font-family: var(--sans);
+}
+
 main h1 {
-  margin: 0 0 14px;
-  font-family: "Trebuchet MS", sans-serif;
+  margin: 0 0 16px;
   font-size: clamp(2rem, 4vw, 2.7rem);
   font-weight: 800;
   letter-spacing: -0.02em;
@@ -30,27 +37,25 @@ main p {
 .src {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  gap: 18px;
+  gap: 14px;
   margin: 32px 0;
 }
 
 .src article {
-  position: relative;
   grid-column: span 2;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 24px;
+  padding: 22px;
   border: 1px solid #e1e9dc;
-  border-radius: 20px;
+  border-radius: 16px;
   background: #fff;
-  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  transition: border-color 0.2s, transform 0.2s;
 }
 
 .src article:hover {
-  transform: translateY(-4px);
   border-color: var(--g);
-  box-shadow: 0 12px 28px rgba(31, 58, 38, 0.12);
+  transform: translateY(-3px);
 }
 
 /* kartu besar (Surya) */
@@ -58,36 +63,33 @@ main p {
   grid-column: span 4;
   min-height: 300px;
   border-color: var(--d);
-  background:
-    radial-gradient(circle at 90% 10%, rgba(245, 197, 24, 0.18), transparent 45%),
-    var(--d);
+  background: var(--d);
 }
 
 /* ikon */
 .ico {
   display: grid;
   place-items: center;
-  width: 60px;
-  height: 60px;
-  margin-bottom: 18px;
-  border-radius: 16px;
+  width: 56px;
+  height: 56px;
+  margin-bottom: 16px;
+  border-radius: 14px;
   background: var(--l);
-  font-size: 1.9rem;
+  font-size: 1.8rem;
 }
 
 .src article:first-child .ico {
-  width: 84px;
-  height: 84px;
-  margin-bottom: 28px;
-  border-radius: 22px;
+  width: 72px;
+  height: 72px;
+  margin-bottom: 24px;
+  border-radius: 18px;
   background: rgba(255, 255, 255, 0.12);
-  font-size: 2.8rem;
+  font-size: 2.4rem;
 }
 
 /* judul dan teks */
 .src h3 {
   margin: 0 0 8px;
-  font-family: "Trebuchet MS", sans-serif;
   font-size: 1.2rem;
   font-weight: 700;
   color: var(--d);
@@ -110,21 +112,18 @@ main p {
   color: #e8f3e0;
 }
 
-/* label di pojok kanan atas */
+/* label di bawah kartu */
 .src small {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  padding: 5px 12px;
-  border-radius: 999px;
-  background: var(--l);
+  margin-top: 16px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   color: var(--g);
-  font: 700 0.75rem "Trebuchet MS", sans-serif;
 }
 
 .src article:first-child small {
-  background: var(--y);
-  color: var(--d);
+  color: var(--y);
 }
 
 /* kotak catatan sumber */
@@ -133,9 +132,8 @@ main p {
   padding: 18px 22px;
   border: 1px solid #d5e3cd;
   border-radius: 16px;
-  background: rgba(255, 255, 255, 0.7);
+  background: var(--l);
   font-size: 0.95rem;
-  line-height: 1.7;
 }
 
 /* tablet */
@@ -144,8 +142,7 @@ main p {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .src article,
-  .src article:first-child {
+  .src article {
     grid-column: span 1;
   }
 
@@ -168,11 +165,6 @@ main p {
   .src article,
   .src article:first-child {
     grid-column: span 1;
-  }
-
-  .src small {
-    position: static;
-    margin-bottom: 14px;
   }
 }
 
